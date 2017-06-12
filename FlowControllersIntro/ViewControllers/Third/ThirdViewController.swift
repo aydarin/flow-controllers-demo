@@ -10,7 +10,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    var onNext: ((Void) -> Void)?
+    var onNext: ((UIColor) -> Void)?
     var text: String!
     
     @IBOutlet private weak var textLabel: UILabel!
@@ -33,7 +33,7 @@ class ThirdViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func nextPressed(_ sender: Any) {
-        onNext?()
+        onNext?(.green)
     }
 
 }

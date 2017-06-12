@@ -12,21 +12,24 @@ class MainFlowController {
     
     private let navigationController: UINavigationController
     
+    var onFinish: ((Void) -> Void)?
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        navigationController.setViewControllers([configuredFirstVC()], animated: false)
+        navigationController.setViewControllers([configuredFirstVC(with: .yellow)], animated: false)
     }
     
-    private func configuredFirstVC() -> FirstViewController {
-        let vc = FirstViewController.createStoryboardInstance()
-        vc.color = .yellow
-        
-        vc.onNext = {
+    private func configuredFirstVC(with color: UIColor) -> FirstViewController {
+        let vm = FirstViewModel(color: color, title: "First")
+        vm.onNext = {
             self.navigationController.pushViewController(self.configuredSecondVC(), animated: true)
         }
+        
+        let vc = FirstViewController.createStoryboardInstance()
+        vc.viewModel = vm
         
         return vc
     }
@@ -46,8 +49,9 @@ class MainFlowController {
         let vc = ThirdViewController.createStoryboardInstance()
         vc.text = "Hello!"
         
-        vc.onNext = {
-            self.navigationController.pushViewController(self.configuredFirstVC(), animated: true)
+        vc.onNext = { color in
+            
+            self.navigationController.pushViewController(self.configuredFirstVC(with: color), animated: true)
         }
         
         return vc

@@ -10,18 +10,23 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var onNext: ((Void) -> Void)?
-    var color: UIColor!
+    var viewModel: FirstViewModel! {
+        didSet {
+            if isViewLoaded {
+                bindToViewModel()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "First"
-        updateColor()
+        bindToViewModel()
     }
     
-    private func updateColor() {
-        view.backgroundColor = color
+    private func bindToViewModel() {
+        title = viewModel.title
+        view.backgroundColor = viewModel.color
     }
     
     static func createStoryboardInstance() -> FirstViewController {
@@ -31,7 +36,7 @@ class FirstViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func nextPressed(_ sender: Any) {
-        onNext?()
+        viewModel.nextPressed()
     }
     
 }

@@ -13,10 +13,11 @@
 		9C4FC5F71EE8489D00538BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4FC5F51EE8489D00538BA0 /* LaunchScreen.storyboard */; };
 		9C4FC6021EE8489D00538BA0 /* FlowControllersIntroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC6011EE8489D00538BA0 /* FlowControllersIntroTests.swift */; };
 		9C4FC60D1EE8489D00538BA0 /* FlowControllersIntroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC60C1EE8489D00538BA0 /* FlowControllersIntroUITests.swift */; };
-		9C4FC61D1EE849C300538BA0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC61C1EE849C300538BA0 /* FirstViewController.swift */; };
-		9C4FC61F1EE849CD00538BA0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC61E1EE849CD00538BA0 /* SecondViewController.swift */; };
-		9C4FC6211EE849DA00538BA0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC6201EE849DA00538BA0 /* ThirdViewController.swift */; };
 		9C4FC6231EE84A0D00538BA0 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FC6221EE84A0D00538BA0 /* MainFlowController.swift */; };
+		9C6CD88E1EEE76A20046FDFC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CD8891EEE76A20046FDFC /* FirstViewController.swift */; };
+		9C6CD88F1EEE76A20046FDFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CD88B1EEE76A20046FDFC /* SecondViewController.swift */; };
+		9C6CD8901EEE76A20046FDFC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CD88D1EEE76A20046FDFC /* ThirdViewController.swift */; };
+		9C6CD8921EEE76C20046FDFC /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CD8911EEE76C20046FDFC /* FirstViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,11 @@
 		9C4FC6081EE8489D00538BA0 /* FlowControllersIntroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowControllersIntroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4FC60C1EE8489D00538BA0 /* FlowControllersIntroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllersIntroUITests.swift; sourceTree = "<group>"; };
 		9C4FC60E1EE8489D00538BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C4FC61C1EE849C300538BA0 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		9C4FC61E1EE849CD00538BA0 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		9C4FC6201EE849DA00538BA0 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		9C4FC6221EE84A0D00538BA0 /* MainFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		9C6CD8891EEE76A20046FDFC /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		9C6CD88B1EEE76A20046FDFC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9C6CD88D1EEE76A20046FDFC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9C6CD8911EEE76C20046FDFC /* FirstViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +135,9 @@
 		9C4FC61A1EE8494200538BA0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C4FC61C1EE849C300538BA0 /* FirstViewController.swift */,
-				9C4FC61E1EE849CD00538BA0 /* SecondViewController.swift */,
-				9C4FC6201EE849DA00538BA0 /* ThirdViewController.swift */,
+				9C6CD8881EEE76A20046FDFC /* First */,
+				9C6CD88A1EEE76A20046FDFC /* Second */,
+				9C6CD88C1EEE76A20046FDFC /* Third */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,6 +150,31 @@
 				9C4FC5F81EE8489D00538BA0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C6CD8881EEE76A20046FDFC /* First */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CD8891EEE76A20046FDFC /* FirstViewController.swift */,
+				9C6CD8911EEE76C20046FDFC /* FirstViewModel.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		9C6CD88A1EEE76A20046FDFC /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CD88B1EEE76A20046FDFC /* SecondViewController.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		9C6CD88C1EEE76A20046FDFC /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CD88D1EEE76A20046FDFC /* ThirdViewController.swift */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,11 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4FC61F1EE849CD00538BA0 /* SecondViewController.swift in Sources */,
+				9C6CD88F1EEE76A20046FDFC /* SecondViewController.swift in Sources */,
+				9C6CD8921EEE76C20046FDFC /* FirstViewModel.swift in Sources */,
+				9C6CD88E1EEE76A20046FDFC /* FirstViewController.swift in Sources */,
+				9C6CD8901EEE76A20046FDFC /* ThirdViewController.swift in Sources */,
 				9C4FC5ED1EE8489D00538BA0 /* AppDelegate.swift in Sources */,
-				9C4FC6211EE849DA00538BA0 /* ThirdViewController.swift in Sources */,
 				9C4FC6231EE84A0D00538BA0 /* MainFlowController.swift in Sources */,
-				9C4FC61D1EE849C300538BA0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +572,7 @@
 				9C4FC6131EE8489D00538BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C4FC6141EE8489D00538BA0 /* Build configuration list for PBXNativeTarget "FlowControllersIntroTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +581,7 @@
 				9C4FC6161EE8489D00538BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C4FC6171EE8489D00538BA0 /* Build configuration list for PBXNativeTarget "FlowControllersIntroUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +590,7 @@
 				9C4FC6191EE8489D00538BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
